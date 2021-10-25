@@ -1,0 +1,44 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bonus Trav</title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <app-nav-bar></app-nav-bar>
+    </header>
+    <section class="info">
+        <div class="contenedor">
+            <h2 class="titulo left" style="font-size: 50px;">Mis Reservas</h2>
+        </div>
+    </section>
+    <div class="container ngbt-forms-cont">
+        <div class="ng-booking-spnv">
+            <app-specific-nav></app-specific-nav>
+        </div>
+
+        <div class="ng-table">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th *ngFor="let column of headersEsp" style="text-align: center;">
+                            {{column}}
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let row of reservas" [routerLink]="['/detalle/', row.booking_id]" class="reservasTable">
+                        <td *ngFor="let column of headers">
+                            {{row[column]}}
+                        </td>
+
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+</body>

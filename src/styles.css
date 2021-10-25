@@ -1,0 +1,1440 @@
+/* You can add global styles to this file, and also import other style files */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Hace que al hacer click en una etiqueta "<a/>", se scrollee en vez de que aparezca seca esa sección. */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+}
+
+.hero {
+    background-image: linear-gradient(120deg, hsla(294, 93%, 78%, 0.7) 0%, hsla(352, 89%, 65%, 0.7) 100%), url("./assets/img/jeshoots-com-mSESwdMZr-A-unsplash.jpg");
+    width: 100%;
+    height: 650px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    /* Esto es lo que da el efecto ese de que aparezca fija la imagen */
+    background-attachment: fixed;
+    position: relative;
+    /* Para que nada salga del hero */
+    overflow: hidden;
+}
+
+.hero-resis {
+    background-image: linear-gradient(120deg, hsla(294, 93%, 78%, 0.7) 0%, hsla(352, 89%, 65%, 0.7) 100%), url("./assets/img/Resist_2.jpg");
+}
+
+.hero-austria {
+    background-image: linear-gradient(120deg, hsla(294, 93%, 78%, 0.7) 0%, hsla(352, 89%, 65%, 0.7) 100%), url("./assets/img/cinco.jpg");
+}
+
+.hero-italia {
+    background-image: linear-gradient(120deg, hsla(294, 93%, 78%, 0.7) 0%, hsla(352, 89%, 65%, 0.7) 100%), url("./assets/img/italia.jpg");
+}
+
+.hero-grecia {
+    background-image: linear-gradient(120deg, hsla(294, 93%, 78%, 0.7) 0%, hsla(352, 89%, 65%, 0.7) 100%), url("./assets/img/grecia.jpg");
+}
+
+.hero-newyork {
+    background-image: linear-gradient(120deg, hsla(294, 93%, 78%, 0.7) 0%, hsla(352, 89%, 65%, 0.7) 100%), url("./assets/img/tres.jpg");
+}
+
+.hero-nosotros {
+    background-image: linear-gradient(120deg, hsla(294, 93%, 78%, 0.7) 0%, hsla(352, 89%, 65%, 0.7) 100%), url("./assets/img/ross-parmly-rf6ywHVkrlY-unsplash.jpg");
+    height: 450px;
+}
+
+.textos-hero {
+    height: 500px;
+    color: white;
+    /* Se ponen uno al lado del otro los textos */
+    display: flex;
+    /* Arregla lo de la línea anterior */
+    flex-direction: column;
+    /* Los centro horizontal y verticalmente */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.textos-hero h1 {
+    font-size: 60px;
+}
+
+.textos-hero p {
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.textos-hero a {
+    display: inline-block;
+    text-decoration: none;
+    padding: 12px 15px;
+    background: #a18cd1;
+    border-radius: 8px;
+    color: white;
+}
+
+.svg-hero {
+    /* Position absolute, para que se posicione inmediatamente del padre (que tiene un position relative) */
+    /* Position absolute lo que hace es, por más que se redimensione la pantalla, el svg no se mueva */
+    /* Por ejemplo, si comentamos estas líneas, y comentamos el height de textos-hero, el svg se va a mover */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+
+/* ESTILOS GENERALES */
+
+.contenedor,
+.wave-contenedor {
+    width: 90%;
+    max-width: 1000px;
+    overflow: hidden;
+    margin: auto;
+    padding: 0 0 80px 0;
+}
+
+.resis {
+    margin-top: 5%;
+}
+
+.contenedor {
+    padding: 80px 0;
+}
+
+.titulo {
+    font-weight: 300;
+    font-size: 35px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.titulo.left {
+    text-align: left;
+}
+
+
+/* Section */
+
+.website {
+    display: flex;
+    /* Separación horizontal entre la imágen y el texto */
+    justify-content: space-between;
+}
+
+.website img {
+    width: 48%;
+}
+
+.website .contenedor-textos-main {
+    width: 40%;
+}
+
+.parrafo {
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+.cta {
+    display: inline-block;
+    text-decoration: none;
+    background-image: linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
+    padding: 12px 15px;
+    border-radius: 8px;
+    color: white;
+}
+
+
+/* Info */
+
+.info {
+    background: #f5576c;
+    color: white;
+}
+
+
+/* Cards */
+
+.content-cards {
+    display: flex;
+    width: 100%;
+    /* Espacios iguales entre items */
+    justify-content: space-evenly;
+    /* Si se consume todo el ancho, que se ponga abajo de los demás elementos */
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 30%;
+    text-align: center;
+    height: 300px;
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, .5);
+    transform: scale(1);
+    /* Da el efecto de movimiento cuando crece la tarjeta con el hover */
+    transition: transform 0.6s;
+}
+
+.card:hover {
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5);
+    /* Que crezca un poco la tarjeta con el hover */
+    transform: scale(1.03);
+    cursor: pointer;
+}
+
+.card .tarjeta {
+    margin: 30px 0 20px 0;
+    width: 70px;
+}
+
+.card .pin {
+    margin: 10px 0 20px 0;
+    width: 60px;
+}
+
+.card .moto {
+    margin: 30px 0 20px 0;
+    width: 85px;
+}
+
+.card p {
+    font-weight: 300;
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+
+/* Galeria */
+
+.galeria {
+    background: #f2f2f2;
+}
+
+.galeria-cont {
+    width: 100%;
+    display: flex;
+    /* La linea de arriba pone una imagen al lado de la otra, la de abajo las pone una abajo de otra */
+    flex-wrap: wrap;
+    /* Las separamos un poco */
+    justify-content: space-evenly;
+    /* Para que nada salga del contenedor de la galería */
+    overflow: hidden;
+}
+
+.galeria-cont>img {
+    width: 30%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    display: block;
+    box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, .5);
+    cursor: pointer;
+    overflow: hidden;
+}
+
+
+/* info2 */
+
+.last-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-bottom: 40px;
+}
+
+.last-section img {
+    width: 48%;
+}
+
+.last-section .contenedor-textos-main {
+    width: 40%;
+}
+
+
+/* Contacto */
+
+.contacto {
+    background: #f5576c;
+    color: white;
+}
+
+.form {
+    display: flex;
+    /* Si los elementos consumen todo el ancho, se van abajo */
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.input {
+    background: transparent;
+    border: 0;
+    color: white;
+    outline: none;
+    border: 1px solid white;
+    padding: 20px 10px;
+}
+
+.input::placeholder {
+    color: white;
+    font-family: 'raleway', 'sans-serif';
+}
+
+input[type="text"],
+input[type="email"] {
+    display: inline-block;
+    width: 49%;
+    margin-bottom: 30px;
+}
+
+.form textarea {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+input[type="submit"],
+input[type="reset"] {
+    width: 120px;
+    text-align: center;
+    padding: 14px 0;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+    cursor: pointer;
+    color: tomato;
+    background: white;
+}
+
+input[type="reset"] {
+    margin-left: 1%;
+}
+
+.contact-buttons {
+    width: 100%;
+}
+
+.contact-paragraph {
+    text-align: center;
+    font-size: 80%;
+    padding-bottom: 2%;
+}
+
+.highlighted-text {
+    font-weight: bold;
+    font-size: 110%;
+}
+
+
+/* Footer */
+
+footer {
+    background-image: linear-gradient(-20deg, #000000 0%, #b721ff 100%);
+    color: white;
+    padding-top: 1%;
+}
+
+footer li {
+    list-style-type: none;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+}
+
+.footer {
+    display: grid;
+    grid-template-columns: 7vw 1fr 7vw;
+    grid-template-rows: auto auto;
+}
+
+.footer-container {
+    grid-column: 2 / 3;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: "logo navigation social" "contact valid newsletter";
+}
+
+.footer-logo {
+    grid-area: logo;
+}
+
+.footer-logo img {
+    width: 25%;
+    display: block;
+    margin: auto;
+    cursor: pointer;
+}
+
+.footer-nav {
+    grid-area: navigation;
+    justify-self: center;
+}
+
+.social-networks {
+    grid-area: social;
+}
+
+.contact-block {
+    grid-area: contact;
+}
+
+.footer-valid {
+    grid-area: valid;
+}
+
+.newsletter {
+    grid-area: newsletter;
+}
+
+.social-networks {
+    grid-area: social;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto;
+    justify-items: center;
+}
+
+.social-networks h3 {
+    grid-column: 1 / -1;
+}
+
+.facebook {
+    justify-self: right;
+}
+
+.instagram {
+    justify-self: left;
+}
+
+.instagram,
+.twitter,
+.facebook {
+    cursor: pointer;
+}
+
+.contact-block,
+.newsletter {
+    align-self: end;
+}
+
+.bottom-line {
+    display: grid;
+    grid-template-columns: 7vw 8fr 4fr 7vw;
+}
+
+.bottom-line p {
+    grid-column: 2;
+}
+
+.legal {
+    justify-items: end;
+    text-align: center;
+}
+
+.footer-valid {
+    margin: auto;
+    padding-top: 17%;
+}
+
+.newsletter {
+    padding-top: 3%;
+}
+
+.newsletter-text,
+.text-input {
+    text-align: center;
+}
+
+.text-input input {
+    border-radius: 0;
+}
+
+.text-input input:first-child {
+    height: 2rem;
+}
+
+.text-input input[type="submit"] {
+    /* Ver si este all:unset anda en edge */
+    all: unset;
+    height: 2rem;
+    color: #fff;
+    border: none;
+    background-color: #bd7027;
+    width: 5rem;
+    font-weight: bold;
+    font-size: 87%;
+    cursor: unset;
+}
+
+.fas,
+.fab {
+    font-size: 1.5rem;
+}
+
+.newsletter-text icon,
+.newsletter-text p {
+    margin: 0 0 1.1rem;
+}
+
+.newsletter-text p {
+    line-height: 2rem;
+}
+
+.footer a {
+    color: #fff;
+}
+
+.contact-block h3 {
+    text-align: center;
+}
+
+.contact-block a {
+    display: block;
+    border: 2px solid #fff;
+    padding: 0.5rem;
+    margin: 10px 0 0;
+    text-align: center;
+    width: 100%;
+}
+
+.contact-block a:hover {
+    border: 2px solid #f99639;
+    color: #f99639;
+}
+
+.social-networks {
+    border-bottom: 2px solid #f99639;
+}
+
+.bottom-line {
+    background-color: #0c0c0c;
+}
+
+.bottom-line,
+.bottom-line a {
+    color: #fff;
+    text-decoration: none;
+}
+
+
+/* MEDIA QUERIES */
+
+@media screen and (min-width: 960px) {
+    .footer {
+        height: 45vh;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .footer-nav,
+    .footer-valid {
+        display: none;
+    }
+    .footer-container {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 20vh 25vh;
+        grid-template-areas: "logo social" "contact newsletter";
+    }
+    .bottom-line {
+        display: grid;
+        grid-template-columns: 7vw 1fr 7vw;
+    }
+    .bottom-line p {
+        justify-self: center;
+    }
+    .legal {
+        grid-column: 2 / -2;
+        justify-items: center;
+    }
+    .newsletter {
+        all: unset;
+        margin-top: 3%;
+    }
+    .contact-block {
+        margin-bottom: 3.5%;
+    }
+    .social-networks h3 {
+        text-align: center;
+    }
+    .card {
+        height: 345px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+        grid-template-areas: "logo" "social" "newsletter" "contact";
+    }
+    .footer-logo,
+    .contact-block {
+        justify-self: center;
+        align-self: center;
+    }
+    .footer-logo img {
+        width: 40%;
+        margin-top: 8%;
+    }
+    .social-networks,
+    .newsletter {
+        padding: 3rem 0;
+    }
+    .contact-block a,
+    .contact-block p {
+        margin: 0 auto;
+    }
+    .contact-block h3,
+    .social-networks h3 {
+        line-height: 3rem;
+    }
+    .newsletter {
+        all: unset;
+        margin-top: 3%;
+    }
+    .contact-block {
+        margin-bottom: 3.5%;
+    }
+    /* Estilos generales */
+    .textos-hero h1 {
+        text-align: center;
+        font-size: 50px;
+    }
+    .textos-hero p {
+        text-align: center;
+    }
+    .titulo {
+        font-size: 35px;
+    }
+    .titulo.left {
+        text-align: center;
+    }
+    .info p {
+        text-align: center;
+    }
+    /* Section */
+    .website {
+        /* Hace que la imagen y el texto se pongan uno debajo de la otra (esa imagen de la mina con la note) */
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+    .website img {
+        width: 100%;
+    }
+    .website .contenedor-textos-main {
+        width: 100%;
+    }
+    /* Cards */
+    .card {
+        width: 90%;
+        margin-bottom: 20px;
+        height: 270px;
+    }
+    /* Galeria */
+    .galeria-cont>img {
+        width: 48%;
+    }
+    /* Last */
+    .last-section img {
+        width: 98%;
+    }
+    .last-section .contenedor-textos-main {
+        width: 98%;
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width:400px) {
+    .titulo,
+    .textos-hero h1 {
+        font-size: 30px;
+    }
+    .textos-hero p {
+        font-size: 20px;
+        text-align: center;
+    }
+    .card {
+        height: 340px;
+    }
+    .website .contenedor-textos-main {
+        margin-bottom: 30px;
+    }
+    .galeria-cont>img {
+        width: 97%;
+    }
+}
+
+.navegacion {
+    background-image: linear-gradient(-20deg, hsla(0, 0%, 0%, 0.5) 0%, hsla(281, 100%, 56%, 0.5) 100%);
+    /* Para que al scrollear quede fija arriba */
+    position: fixed;
+    /* Para que quede siempre arriba de todo el resto */
+    z-index: 999;
+    width: 100%;
+}
+
+.logo {
+    text-align: center;
+}
+
+.navegacion img {
+    width: 10%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.nav-toggle {
+    position: absolute !important;
+    top: -9999px !important;
+    left: -9999px !important;
+}
+
+.nav-toggle:focus~.nav-toggle-label {
+    outline: 3px solid rgba(lightblue, .75);
+}
+
+
+/* Centro el menú hamburguesa verticalmente */
+
+.nav-toggle-label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 1em;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+
+/* Dibujo el menú hamburguesa */
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    display: block;
+    background: white;
+    height: 2px;
+    width: 2em;
+    border-radius: 2px;
+    position: relative;
+}
+
+
+/* Dibujo el menú hamburguesa */
+
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    content: '';
+    position: absolute;
+}
+
+
+/* Dibujo la primer línea del menú hamburguesa */
+
+.nav-toggle-label span::before {
+    bottom: 7px;
+}
+
+
+/* Dibujo la última línea del del menú hamburguesa */
+
+.nav-toggle-label span::after {
+    top: 7px;
+}
+
+nav {
+    /* Para que sea relativo a la posición de todo el div que lo contiene */
+    position: absolute;
+    text-align: left;
+    top: 100%;
+    left: 0;
+    background-image: linear-gradient(-20deg, hsla(0, 0%, 0%, 0.5) 0%, hsla(281, 100%, 56%, 0.5) 100%);
+    width: 100%;
+    /* Transformación para el despliegue al clickear el menú hamburguesa.. El resultado es el mismo que con display: none; pero con transform para poder aplicrle el efecto transition de abajo */
+    transform: scale(1, 0);
+    /* Hace que el despliegue del menú empiece desde arriba (sin esta linea, el despliegue empieza desde el medio) */
+    transform-origin: top;
+    transition: transform 400ms ease-in-out;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    /* Le saco los puntos esos de items al costado */
+    list-style: none;
+    padding-top: 2%;
+}
+
+nav li {
+    margin-bottom: 1em;
+    margin-left: 1em;
+}
+
+nav a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    opacity: 0;
+    /* Transición definida para cuando se descheckee el menú hamburguesa */
+    transition: opacity 150ms ease-in-out;
+}
+
+nav a:hover {
+    color: #f99639;
+}
+
+
+/* Si el checkbox está checkeado, se aplica el transform */
+
+.nav-toggle:checked~nav {
+    transform: scale(1, 1);
+}
+
+
+/* Si está checkeado el menú hamburguesa, que aparezcan los links <a> con un efecto transition */
+
+.nav-toggle:checked~nav a {
+    opacity: 1;
+    transition: opacity 250ms ease-in-out 250ms;
+}
+
+@media screen and (min-width: 800px) {
+    .navegacion {
+        padding-top: 0.5%;
+    }
+    .navegacion img {
+        width: 4.8%;
+        margin-bottom: -1.8%;
+        margin-left: 2%;
+        z-index: 100000;
+        position: relative;
+        cursor: pointer;
+    }
+    /* Que no se vea el menú hamburguesa cuando se esté en pantalla grande */
+    .nav-toggle-label {
+        display: none;
+    }
+    .navegacion-env {
+        display: grid;
+        grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
+    }
+    .logo {
+        grid-column: 2 / 3;
+        text-align: left;
+        margin-bottom: -2%
+    }
+    nav {
+        /* Saco todos los estilos definidos para la versión mobile (no soportado en Edge) */
+        all: unset;
+        /* Las siguientes líneas son redefiniciones manuales del estilo mobile para ser soportado en Edge */
+        /* 
+        position: relative;
+        text-align: left;
+        transition: none;
+        transform: scale(1,1);
+        background: none;
+        top: initial;
+        left: initial;
+        */
+        /* Fin soporte para Edge */
+        grid-column: 3 / 4;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    nav ul {
+        /* Coloco cada ul uno al lado del otro */
+        display: flex;
+        margin-right: 1%;
+        padding-top: 0;
+    }
+    nav li {
+        margin-left: 3em;
+        margin-bottom: 0;
+    }
+    nav a {
+        opacity: 1;
+        position: relative;
+    }
+    /* Dibujo la línea por encima de los ul para darle el efecto del hover */
+    nav a::before {
+        content: '';
+        display: block;
+        height: 5px;
+        background: #f99639;
+        ;
+        position: absolute;
+        top: -.75em;
+        left: 0;
+        right: 0;
+        /* Estas líneas más las de nav a:hover::before, hacen el efecto del hover */
+        transform: scale(0, 1);
+        transition: transform ease-in-out 250ms;
+    }
+    nav a:hover::before {
+        transform: scale(1, 1);
+    }
+}
+
+.slider-container {
+    margin: auto;
+    background-color: #f2f2f2;
+    width: 700px;
+    grid-area: desplazador;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    border-radius: 20px;
+}
+
+ul,
+li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+ul.slider {
+    position: relative;
+    width: 100%;
+    height: 400px;
+}
+
+ul.slider li {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    opacity: 0;
+    /* Que herede el tamaño del padre (el slider) */
+    width: inherit;
+    height: inherit;
+    transition: opacity .5s;
+    background: #f2f2f2;
+    border-radius: 20px;
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, .5);
+}
+
+ul.slider li img {
+    width: 100%;
+    height: 400px;
+    /* Para que no se achate la imagen al cambiarle l height */
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+ul.slider li:first-child {
+    opacity: 1;
+    /*Mostramos la primera imagen*/
+}
+
+ul.slider li:target {
+    opacity: 1;
+    /*Mostramos la imagen del enlace que pulsemos*/
+}
+
+.menu {
+    text-align: center;
+    margin: 20px;
+}
+
+.menu li {
+    display: inline-block;
+    text-align: center;
+}
+
+.menu li a {
+    all: unset;
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    background-color: grey;
+    padding: 10px;
+    width: 20px;
+    height: 20px;
+    font-size: 20px;
+    border-radius: 100%;
+    cursor: pointer;
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, .5);
+}
+
+.menu li a:hover {
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, .5);
+    transition: 0.4s;
+}
+
+.parrafo-destino {
+    margin-bottom: 2%;
+    text-align: justify;
+}
+
+.cita {
+    padding: 5%;
+    background-color: lightgray;
+    border-left-width: 0 33px;
+    border-left: solid #b721ff;
+    margin: 2% 0;
+    font-style: italic;
+}
+
+.autor {
+    font-style: normal;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 2%;
+    margin-bottom: -2%;
+}
+
+.destino-container {
+    display: grid;
+    grid-template-columns: 1fr 20%;
+    grid-template-rows: 1fr minmax(auto 1fr);
+    grid-template-areas: "desplazador hoteles" "descripcion hoteles";
+}
+
+.destino-descripcion {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 5%;
+    grid-area: descripcion;
+}
+
+.hoteles {
+    grid-area: hoteles;
+}
+
+.card-hotel {
+    width: 95%;
+    height: 100%;
+    margin: unset;
+    margin-left: auto;
+    margin-right: auto;
+    transform: unset;
+    transition: unset;
+    margin-bottom: 15%;
+    padding-top: 5%;
+}
+
+.card-hotel:hover {
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, .5);
+    /* Que crezca un poco la tarjeta con el hover */
+    transform: unset;
+    cursor: unset;
+}
+
+.card-hotel h3 {
+    display: inline;
+}
+
+.card-hotel i {
+    color: #4b4b4b;
+    display: inline-block;
+    padding-right: 2%;
+    margin-bottom: 7%;
+}
+
+.card-hotel a {
+    text-decoration: none;
+    color: #4b4b4b;
+}
+
+.card-span {
+    all: unset !important;
+    padding: 2% !important;
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.8) !important;
+    font-size: 15px !important;
+    margin: 2% !important;
+    white-space: nowrap !important;
+}
+
+.nosotros-container {
+    display: grid;
+    grid-template-columns: 0px 1fr 0px;
+    grid-template-areas: ". nosotros .";
+    margin: 5%;
+    background: #f2f2f2;
+}
+
+.nosotros {
+    grid-area: nosotros;
+    width: 100%;
+}
+
+td {
+    text-align: center;
+    margin: auto;
+    width: 50%;
+}
+
+td h2,
+td p {
+    padding: 1.5%;
+    width: 80%;
+    margin: auto;
+}
+
+td img {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+}
+
+.info-nosotros {
+    text-align: center;
+    color: white;
+}
+
+.info-nosotros h2 {
+    text-align: center !important;
+    font-weight: bold;
+}
+
+.info-nosotros p {
+    font-weight: 500;
+}
+
+.info-nosotros i {
+    font-size: 800%;
+    padding: 3%;
+    cursor: pointer;
+}
+
+.card-nosotros {
+    width: 23%;
+    cursor: unset !important;
+    height: 340px;
+}
+
+.card-nosotros img {
+    border-radius: 50%;
+    width: 70% !important;
+    margin: auto;
+    border-width: 0 33px;
+    border: solid #ffffff;
+    box-shadow: 1px 4px 6px 1px rgba(0, 0, 0, .3);
+}
+
+.card-nosotros .seccion {
+    background: #e4e4e4;
+    padding-bottom: 2%;
+}
+
+.card-nosotros .seccion i {
+    padding: 1.5%;
+    cursor: pointer;
+}
+
+.fa-facebook-square {
+    color: #00508f;
+}
+
+.fa-twitter-square {
+    color: #00aeef;
+}
+
+.fa-linkedin {
+    color: #004378;
+}
+
+.card-nosotros h3 {
+    color: #faa61a;
+    padding-top: 5%;
+    padding-bottom: 2%;
+}
+
+.card-nosotros p {
+    font-size: 110%;
+    color: #757575;
+    font-weight: 500 !important;
+}
+
+.bg-grey {
+    background: #f2f2f2;
+    padding: 3% 0;
+}
+
+.oficinas-container {
+    display: grid;
+    grid-template-columns: 20px 1fr 1fr 20px;
+    grid-template-areas: ". texto-ofi mapa .";
+}
+
+.texto-ofi {
+    grid-area: texto-ofi;
+    margin: auto !important;
+}
+
+.texto-ofi p,
+.texto-ofi h2 {
+    text-align: justify;
+    width: 65%;
+    margin: auto;
+}
+
+.texto-ofi h2 {
+    padding-bottom: 3.5%;
+}
+
+.mapa {
+    grid-area: mapa;
+}
+
+.pagos-container {
+    display: grid;
+    grid-template-columns: 100px 1fr 20% 50px;
+    grid-template-rows: 1.23fr 1fr;
+    grid-gap: 35px;
+    grid-template-areas: ". texto-pagos tags-pagos ." ". deco-pagos tags-pagos .";
+}
+
+.texto-pagos {
+    grid-area: texto-pagos;
+}
+
+.tags-pagos {
+    grid-area: tags-pagos;
+}
+
+.deco-pagos {
+    grid-area: deco-pagos;
+    display: grid;
+    grid-gap: 35px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 90px 1fr 1fr 40px;
+    grid-template-areas: "titulo-deco titulo-deco" "credito efectivo" "paypal bitcoin" ". .";
+}
+
+.cita-titulo,
+.titulo-deco {
+    padding: 0 2%;
+    border-left-width: 6px !important;
+    border-left: solid #b721ff;
+    margin: 2% 0;
+    font-style: italic;
+}
+
+.texto-pagos img {
+    width: 90%;
+    margin: auto !important;
+    padding: 3%;
+    display: block;
+}
+
+.titulo-deco {
+    grid-area: titulo-deco;
+}
+
+.credito {
+    grid-area: credito;
+}
+
+.efectivo {
+    grid-area: efectivo;
+}
+
+.paypal {
+    grid-area: paypal;
+}
+
+.bitcoin {
+    grid-area: bitcoin;
+}
+
+.deco-pagos i {
+    padding: unset;
+    color: #f99639;
+    font-size: 500%;
+    display: block;
+    text-align: center;
+    margin-top: 5%;
+    transform: scale(1);
+    transition: transform 0.6s;
+    cursor: pointer;
+    width: 20%;
+    margin: auto;
+}
+
+.deco-pagos i:hover {
+    /* Que crezca un poco la tarjeta con el hover */
+    transform: scale(1.1);
+}
+
+.deco-pagos h2,
+.deco-pagos p {
+    text-align: center;
+    padding: 2%;
+    width: 90%;
+    margin: auto;
+}
+
+.deco-pagos h2 {
+    padding-top: 5%;
+}
+
+#tit-benef {
+    padding: unset;
+    margin: unset;
+}
+
+.fa-handshake {
+    font-size: 170%;
+}
+
+.enlaces {
+    padding: 8%;
+    margin-bottom: 15%;
+}
+
+.enlaces h2 {
+    padding: 5%;
+}
+
+.enlaces i {
+    font-size: 90%;
+    text-decoration: none;
+    color: #000000;
+    color: #757575;
+    cursor: pointer;
+}
+
+.tabla-enlaces {
+    border-top: solid #e9e7e7;
+    border-width: thin;
+}
+
+.tabla-enlaces tr {
+    line-height: 25px;
+}
+
+.tabla-enlaces td {
+    text-align: left;
+    border-bottom: solid #e9e7e7;
+    border-width: thin;
+}
+
+.tabla-enlaces td:hover {
+    border-bottom: solid #000000;
+    border-width: thin;
+}
+
+body {
+    margin: 0;
+}
+
+.colorBtnBnTv {
+    background-color: #f5576c !important;
+    border: none !important;
+}
+
+.cerrarSesion {
+    margin-bottom: 15%;
+    font-weight: bold !important;
+}
+
+.nombreUsuario {
+    margin-left: 8%;
+    margin-top: 2%;
+    width: 12%;
+    color: white;
+    display: block !important;
+    position: absolute !important;
+    font-weight: bold;
+    font-size: large;
+}
+
+.reservasTable {
+    cursor: pointer;
+}
+
+.ngbt-forms-cont {
+    margin: auto !important;
+    width: 30% !important;
+}
+
+.ngbt-input {
+    width: 100% !important;
+}
+
+.ng-btn {
+    text-align: center !important;
+    padding: 4%;
+}
+
+.ng-spnv {
+    padding: 10%;
+}
+
+.ng-table {
+    padding-bottom: 5% !important;
+}
+
+.ng-booking-spnv {
+    text-align: center;
+    padding: 5%;
+}
+
+.ngbt-select {
+    padding-top: 5%;
+}
+
+.ngbt-detail {
+    text-align: center;
+}
+
+.ng-play {
+    font-size: 900%;
+    cursor: pointer;
+}
+
+.ng-btn-indx {
+    text-decoration: none !important;
+}
+
+.ng-btn-indx:hover {
+    text-decoration: none !important;
+    color: white;
+}
+
+.ng-article {
+    width: 35%;
+    margin: 0 auto;
+}
+
+.ng-card {
+    padding-bottom: 2%;
+}
+
+.ng-footer {
+    padding: unset;
+    margin: unset;
+    padding-top: 2%;
+    padding-bottom: 22%;
+}
+
+.ng-contact-footer {
+    text-decoration: none !important;
+}
+
+.ng-article-icons {
+    margin: 0 2%;
+    font-size: 135%;
+    cursor: pointer;
+}

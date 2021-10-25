@@ -1,0 +1,13 @@
+<div *ngIf="specific=='login'|| specific=='register'" class="ng-spnv">
+    <nav>
+        <a routerLink="/login">Iniciar Sesión</a>
+        <a routerLink="/register">Regístrate</a>
+    </nav>
+</div>
+
+<div *ngIf="specific=='reservas'|| specific=='nueva' || specific=='detalle'">
+    <nav>
+        <a routerLink="/reservas">Mis Reservas</a>
+        <a routerLink="/nueva">Nueva Reserva</a>
+    </nav>
+</div>

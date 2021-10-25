@@ -1,0 +1,217 @@
+/* MEDIA QUERIES */
+
+.navegacion {
+    background-image: linear-gradient(-20deg, hsla(0, 0%, 0%, 0.5) 0%, hsla(281, 100%, 56%, 0.5) 100%);
+    /* Para que al scrollear quede fija arriba */
+    position: fixed;
+    /* Para que quede siempre arriba de todo el resto */
+    z-index: 999;
+    width: 100%;
+}
+
+.logo {
+    text-align: center;
+}
+
+.navegacion img {
+    width: 10%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.nav-toggle {
+    position: absolute !important;
+    top: -9999px !important;
+    left: -9999px !important;
+}
+
+.nav-toggle:focus~.nav-toggle-label {
+    outline: 3px solid rgba(lightblue, .75);
+}
+
+
+/* Centro el menú hamburguesa verticalmente */
+
+.nav-toggle-label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 1em;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+
+/* Dibujo el menú hamburguesa */
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    display: block;
+    background: white;
+    height: 2px;
+    width: 2em;
+    border-radius: 2px;
+    position: relative;
+}
+
+
+/* Dibujo el menú hamburguesa */
+
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    content: '';
+    position: absolute;
+}
+
+
+/* Dibujo la primer línea del menú hamburguesa */
+
+.nav-toggle-label span::before {
+    bottom: 7px;
+}
+
+
+/* Dibujo la última línea del del menú hamburguesa */
+
+.nav-toggle-label span::after {
+    top: 7px;
+}
+
+nav {
+    /* Para que sea relativo a la posición de todo el div que lo contiene */
+    position: absolute;
+    text-align: left;
+    top: 100%;
+    left: 0;
+    background-image: linear-gradient(-20deg, hsla(0, 0%, 0%, 0.5) 0%, hsla(281, 100%, 56%, 0.5) 100%);
+    width: 100%;
+    /* Transformación para el despliegue al clickear el menú hamburguesa.. El resultado es el mismo que con display: none; pero con transform para poder aplicrle el efecto transition de abajo */
+    transform: scale(1, 0);
+    /* Hace que el despliegue del menú empiece desde arriba (sin esta linea, el despliegue empieza desde el medio) */
+    transform-origin: top;
+    transition: transform 400ms ease-in-out;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    /* Le saco los puntos esos de items al costado */
+    list-style: none;
+    padding-top: 2%;
+}
+
+nav li {
+    margin-bottom: 1em;
+    margin-left: 1em;
+}
+
+nav a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    opacity: 0;
+    /* Transición definida para cuando se descheckee el menú hamburguesa */
+    transition: opacity 150ms ease-in-out;
+}
+
+nav a:hover {
+    color: #f99639;
+}
+
+
+/* Si el checkbox está checkeado, se aplica el transform */
+
+.nav-toggle:checked~nav {
+    transform: scale(1, 1);
+}
+
+
+/* Si está checkeado el menú hamburguesa, que aparezcan los links <a> con un efecto transition */
+
+.nav-toggle:checked~nav a {
+    opacity: 1;
+    transition: opacity 250ms ease-in-out 250ms;
+}
+
+@media screen and (min-width: 800px) {
+    .navegacion {
+        padding-top: 0.5%;
+    }
+    .navegacion img {
+        width: 4.8%;
+        margin-bottom: -1.8%;
+        margin-left: 2%;
+        z-index: 100000;
+        position: relative;
+        cursor: pointer;
+    }
+    /* Que no se vea el menú hamburguesa cuando se esté en pantalla grande */
+    .nav-toggle-label {
+        display: none;
+    }
+    .navegacion-env {
+        display: grid;
+        grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
+    }
+    .logo {
+        grid-column: 2 / 3;
+        text-align: left;
+        margin-bottom: -2%
+    }
+    nav {
+        /* Saco todos los estilos definidos para la versión mobile (no soportado en Edge) */
+        all: unset;
+        /* Las siguientes líneas son redefiniciones manuales del estilo mobile para ser soportado en Edge */
+        /* 
+        position: relative;
+        text-align: left;
+        transition: none;
+        transform: scale(1,1);
+        background: none;
+        top: initial;
+        left: initial;
+        */
+        /* Fin soporte para Edge */
+        grid-column: 3 / 4;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    nav ul {
+        /* Coloco cada ul uno al lado del otro */
+        display: flex;
+        margin-right: 1%;
+        padding-top: 0;
+    }
+    nav li {
+        margin-left: 3em;
+        margin-bottom: 0;
+    }
+    nav a {
+        opacity: 1;
+        position: relative;
+    }
+    /* Dibujo la línea por encima de los ul para darle el efecto del hover */
+    nav a::before {
+        content: '';
+        display: block;
+        height: 5px;
+        background: #f99639;
+        ;
+        position: absolute;
+        top: -.75em;
+        left: 0;
+        right: 0;
+        /* Estas líneas más las de nav a:hover::before, hacen el efecto del hover */
+        transform: scale(0, 1);
+        transition: transform ease-in-out 250ms;
+    }
+    nav a:hover::before {
+        transform: scale(1, 1);
+    }
+}

@@ -1,0 +1,59 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bonus Trav</title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <app-nav-bar></app-nav-bar>
+    </header>
+    <section class="info">
+        <div class="contenedor">
+            <h2 class="titulo left" style="font-size: 50px;">Nueva Reserva</h2>
+        </div>
+    </section>
+    <div class="container ngbt-forms-cont">
+        <div class="ng-booking-spnv">
+            <app-specific-nav></app-specific-nav>
+        </div>
+        <div [hidden]="submitted">
+            <form (ngSubmit)="onSubmit(model.date, destiny.value);" #reservaForm="ngForm">
+
+                <label for="formu">Fecha</label>
+                <app-datepicker-basic id="formu" (newItemEvent)="addItem($event)"></app-datepicker-basic>
+                <!-- {{ model | json}} -->
+
+                <div class="form-group ngbt-select">
+                    <label for="destiny">Destino</label>
+                    <select class="form-control" id="destiny" required [(ngModel)]="model.destiny" name="destiny" #destiny="ngModel">
+                      <option *ngFor="let dest of destinies" [value]="dest.destiny_id">{{dest.name}}</option>
+                    </select>
+                </div>
+                <div class="ng-btn">
+                    <button type="submit" class="btn btn-primary colorBtnBnTv " [disabled]="!reservaForm.form.valid">Guardar</button>
+                </div>
+
+            </form>
+        </div>
+
+        <div [hidden]="!submitted" class="success-booking">
+            <h2>Registraste lo siguiente:</h2>
+            <div class="row suc-book">
+                <b><div class="col-xs-3">Fecha:</div></b>
+                <div class="col-xs-9">&nbsp;{{ model.date }}</div>
+            </div>
+            <div class="row suc-book">
+                <b><div class="col-xs-3">Destino:</div></b>
+                <div *ngFor="let item of destinies">
+                    <div class="col-xs-9" *ngIf="item.destiny_id == model.destiny">
+                        &nbsp;
+                        {{ item.name }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>

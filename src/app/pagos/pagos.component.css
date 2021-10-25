@@ -1,0 +1,19 @@
+.ng-pay {
+    all: unset;
+    padding: unset;
+    color: #f99639 !important;
+    font-size: 500%;
+    display: block;
+    text-align: center;
+    margin-top: 5%;
+    transform: scale(1);
+    transition: transform 0.6s;
+    cursor: pointer;
+    width: 20%;
+    margin: auto;
+}
+
+.ng-pay:hover {
+    /* Que crezca un poco la tarjeta con el hover */
+    transform: scale(1.1);
+}

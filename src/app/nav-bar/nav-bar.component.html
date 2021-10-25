@@ -1,0 +1,40 @@
+<div *ngIf="!username" class="navegacion-env" id="nav">
+    <div class="navegacion">
+        <img src="../../assets/img/logo.-rec-3png" alt="logo" onclick="location.href = '';" />
+        <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+        <nav>
+            <ul>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#destinos">Destinos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a [routerLink]="['/login']">Login</a></li>
+            </ul>
+        </nav>
+        <label for="nav-toggle" class="nav-toggle-label">
+            <span></span>
+        </label>
+    </div>
+</div>
+
+<div *ngIf="username" class="navegacion-env" id="nav">
+    <div class="navegacion">
+        <div class="nombreUsuario">{{ username }}</div>
+        <img src="../../assets/img/logo.-rec-3png" alt="logo" onclick="location.href = '';" />
+        <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+
+        <nav>
+            <ul>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#destinos">Destinos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a [routerLink]="['/reservas']">Reservas</a></li>
+                <li><button (click)="logout()" class="btn btn-primary colorBtnBnTv cerrarSesion">Logout</button></li>
+            </ul>
+        </nav>
+        <label for="nav-toggle" class="nav-toggle-label">
+            <span></span>
+        </label>
+    </div>
+</div>

@@ -1,0 +1,34 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bonus Trav</title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <app-nav-bar></app-nav-bar>
+    </header>
+    <section class="info">
+        <div class="contenedor">
+            <h2 class="titulo left" style="font-size: 50px;">Detalle de Reserva</h2>
+        </div>
+    </section>
+    <div class="container ngbt-forms-cont">
+        <div class="ng-booking-spnv">
+            <app-specific-nav></app-specific-nav>
+        </div>
+
+        <div *ngIf="reserva" class="ngbt-detail">
+            <h2>{{reserva.destiny | uppercase}}</h2>
+            <div><b><span>Fecha: </span></b>{{reserva.date}}</div>
+            <div><b><span>Monto: </span></b>{{reserva.amount}}</div>
+            <p *ngIf="alert">
+                <ngb-alert type='danger' (close)="closeAlert()">Al cancelar la reserva se perderá toda la información relacionada a la misma</ngb-alert>
+            </p>
+            <div class="ng-btn">
+                <button class="btn btn-primary colorBtnBnTv" title="Cancelar Reserva" (click)="delete()">Cancelar</button>
+            </div>
+        </div>
+    </div>
+</body>

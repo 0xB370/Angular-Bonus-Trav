@@ -1,0 +1,47 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bonus Trav</title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <app-nav-bar></app-nav-bar>
+    </header>
+    <section class="info">
+        <div class="contenedor">
+            <h2 class="titulo left" style="font-size: 50px;">Formulario de Registro</h2>
+        </div>
+    </section>
+    <div class="container ngbt-forms-cont">
+        <app-specific-nav></app-specific-nav>
+        <div>
+            <form (ngSubmit)="onSubmit(username.value, password.value, repeatPassword.value)" #reservaForm="ngForm">
+                <div class="form-group">
+                    <label for="username">Nombre de Usuario</label><br/>
+                    <input type="text" class="form-control ngbt-input" id="username" required [(ngModel)]="model.username" name="username" #username="ngModel">
+                    <div [hidden]="username.valid || username.pristine" class="alert alert-danger">
+                        El nombre de usario es obligatorio
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Contraseña</label>
+                    <input type="password" class="form-control ngbt-input" id="password" required [(ngModel)]="model.password" name="password" #password="ngModel">
+                </div>
+
+                <div class="form-group">
+                    <label for="repeatPassword">Repetir Contraseña</label>
+                    <input type="password" class="form-control ngbt-input" id="repeatPassword" required [(ngModel)]="model.repeatPassword" name="repeatPassword" #repeatPassword="ngModel">
+                    <div [hidden]="repeatPassword.valid || repeatPassword.pristine" class="alert alert-danger">
+                        La contraseña de usario es obligatorio
+                    </div>
+                </div>
+                <div class="ng-btn">
+                    <button type="submit" class="btn btn-success colorBtnBnTv" [disabled]="!reservaForm.form.valid">Registrarse</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>

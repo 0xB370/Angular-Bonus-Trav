@@ -1,0 +1,17 @@
+<form class="form-inline">
+    <div class="form-group">
+        <div class="input-group">
+            <!-- <input class="form-control" [(ngModel)]="modelo.date" placeholder="aaaa-mm-dd" name="dp" [(ngModel)]="model" ngbDatepicker [footerTemplate]="footerTemplate" #d="ngbDatepicker" #newItem (input)="addNewItem(newItem.value)"> -->
+            <input class="form-control" placeholder="aaaa-mm-dd" name="dp" [(ngModel)]="model" ngbDatepicker [footerTemplate]="footerTemplate" #d="ngbDatepicker" #newItem (ngModelChange)="addNewItem(newItem.value)">
+            <div class="input-group-append">
+                <button class="btn btn-outline-secondary calendar" (click)="d.toggle()" type="button"></button>
+            </div>
+        </div>
+    </div>
+</form>
+
+<ng-template #footerTemplate>
+    <hr class="my-0">
+    <button class="btn btn-primary btn-sm m-2 float-left" (click)="model = today; d.close(); addNewItem(hoy);">Today</button>
+    <button class="btn btn-secondary btn-sm m-2 float-right" (click)="d.close()">Close</button>
+</ng-template>

@@ -1,0 +1,554 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bonus Trav</title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- ITALIA -->
+    <div *ngIf="specific=='italia'">
+        <header class="hero hero-italia">
+            <app-nav-bar></app-nav-bar>
+            <div class="textos-hero">
+                <h1>Italia</h1>
+                <p>Turismo, Mar, Gastronomía, y Mucho Más</p>
+            </div>
+            <div class="svg-wave" style="height: 150px; overflow: hidden;">
+                <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
+                    <path d="M0.00,49.98 C150.00,150.00 349.20,-50.00 500.00,49.98 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: #ffffff;"></path>
+                </svg>
+            </div>
+        </header>
+        <section class="destino-container">
+            <div class="slider-container" style="float: left;">
+                <ul class="slider">
+                    <li id="slide1">
+                        <img src="../../assets/img/italia-3.jpg" />
+                    </li>
+                    <li id="slide2">
+                        <img src="../../assets/img/italia-1.jpg" />
+                    </li>
+                    <li id="slide3">
+                        <img src="../../assets/img/italia-4.jpg" />
+                    </li>
+                </ul>
+                <ul class="menu">
+                    <li>
+                        <a href="italia#slide1">1</a>
+                    </li>
+                    <li>
+                        <a href="italia#slide2">2</a>
+                    </li>
+                    <li>
+                        <a href="italia#slide3">3</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="destino-descripcion">
+                <p class="parrafo-destino">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, numquam tempore reprehenderit nihil vero quisquam ab deserunt excepturi nam delectus unde, minima cum exercitationem eius possimus dolores deleniti autem corporis, vel eaque! Facilis
+                    aut maiores, itaque labore placeat nesciunt accusantium dolores repudiandae corporis saepe quos quasi qui, eos provident distinctio laborum, magni rem! Repellendus cumque neque molestiae, culpa, asperiores enim veniam molestias corrupti
+                    fugiat dignissimos suscipit, soluta minus magnam itaque! Tempore quaerat id eius nisi corporis natus illo voluptas voluptates delectus labore veniam, explicabo, distinctio ipsa officia, nihil provident ut! Vero, facere dolorem eos aut
+                    veniam praesentium! Praesentium, odit cupiditate.
+                </p>
+                <div class="cita">
+                    <p>
+                        "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam illum optio cum veniam temporibus voluptatem minima dolorem sed molestias minus?"
+                    </p>
+                    <p class="autor">
+                        Alguien
+                    </p>
+                </div>
+                <p class="parrafo-destino">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, numquam tempore reprehenderit nihil vero quisquam ab deserunt excepturi nam delectus unde, minima cum exercitationem eius possimus dolores deleniti autem corporis, vel eaque! Facilis
+                    aut maiores, itaque labore placeat nesciunt accusantium dolores repudiandae corporis saepe quos quasi qui, eos provident distinctio laborum, magni rem! Repellendus cumque neque molestiae, culpa, asperiores enim veniam molestias corrupti
+                    fugiat dignissimos suscipit, soluta minus magnam itaque! Tempore quaerat id eius nisi corporis natus illo voluptas voluptates delectus labore veniam, explicabo, distinctio ipsa officia, nihil provident ut! Vero, facere dolorem eos aut
+                    veniam praesentium! Praesentium, odit cupiditate.
+                </p>
+            </div>
+            <div class="cards contenedor hoteles">
+                <div class="content-cards">
+                    <article class="card card-hotel">
+                        <div>
+                            <i class="fas fa-hotel"></i> &nbsp;
+                            <h3>Hoteles</h3>
+                        </div>
+                        <p>
+                            <a href="https://www.trivago.com.ar/" target="_blanck">Hotel 1</a>
+                        </p>
+                        <p>
+                            <a href="https://www.trivago.com.ar/" target="_blanck">Hotel 2</a>
+                        </p>
+                        <p>
+                            <a href="https://www.trivago.com.ar/" target="_blanck">Hotel 3</a>
+                        </p>
+                        <p>
+                            <a href="https://www.trivago.com.ar/" target="_blanck">Hotel 4</a>
+                        </p>
+                    </article>
+                    <article class="card card-hotel">
+                        <div>
+                            <i class="fas fa-tag"></i> &nbsp;
+                            <h3>Tags</h3>
+                        </div>
+                        <p>
+                            <span class="card card-hotel card-span">Mafia</span>
+                            <span class="card card-hotel card-span">Vendetta</span>
+                            <span class="card card-hotel card-span">VirusFriendly</span>
+                        </p>
+                        <p>
+                            <span class="card card-hotel card-span">Mar</span>
+                            <span class="card card-hotel card-span">Turismo</span>
+                            <span class="card card-hotel card-span">Tag5</span>
+                            <span class="card card-hotel card-span">Tag6</span>
+                        </p>
+                        <p>
+                            <span class="card card-hotel card-span">Tag7</span>
+                            <span class="card card-hotel card-span">Tag8</span>
+                            <span class="card card-hotel card-span">Tag9</span>
+                            <span class="card card-hotel card-span">Tag10</span>
+                        </p>
+                        <p>
+                            <span class="card card-hotel card-span">Tag11</span>
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- FIN ITALIA -->
+    <!-- NEW YORK -->
+    <div *ngIf="specific=='new-york'">
+        <header class="hero hero-newyork">
+            <app-nav-bar></app-nav-bar>
+            <div class="textos-hero">
+                <h1>New York</h1>
+                <p>Turismo, Historia, Gastronomía, y Mucho Más</p>
+            </div>
+            <div class="svg-hero" style="height: 150px; overflow: hidden;">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="100 100 1440 3200">
+                    <path fill="#ffffff" fill-opacity="1" d="M0,128L0,32L55.4,32L55.4,288L110.8,288L110.8,288L166.2,288L166.2,192L221.5,192L221.5,192L276.9,192L276.9,160L332.3,160L332.3,288L387.7,288L387.7,128L443.1,128L443.1,192L498.5,192L498.5,256L553.8,256L553.8,320L609.2,320L609.2,256L664.6,256L664.6,288L720,288L720,320L775.4,320L775.4,96L830.8,96L830.8,96L886.2,96L886.2,128L941.5,128L941.5,96L996.9,96L996.9,32L1052.3,32L1052.3,320L1107.7,320L1107.7,96L1163.1,96L1163.1,64L1218.5,64L1218.5,224L1273.8,224L1273.8,0L1329.2,0L1329.2,192L1384.6,192L1384.6,288L1440,288L1440,320L1384.6,320L1384.6,320L1329.2,320L1329.2,320L1273.8,320L1273.8,320L1218.5,320L1218.5,320L1163.1,320L1163.1,320L1107.7,320L1107.7,320L1052.3,320L1052.3,320L996.9,320L996.9,320L941.5,320L941.5,320L886.2,320L886.2,320L830.8,320L830.8,320L775.4,320L775.4,320L720,320L720,320L664.6,320L664.6,320L609.2,320L609.2,320L553.8,320L553.8,320L498.5,320L498.5,320L443.1,320L443.1,320L387.7,320L387.7,320L332.3,320L332.3,320L276.9,320L276.9,320L221.5,320L221.5,320L166.2,320L166.2,320L110.8,320L110.8,320L55.4,320L55.4,320L0,320L0,320Z"></path>
+                </svg>
+            </div>
+        </header>
+        <section class="destino-container">
+            <div class="slider-container" style="float: left;">
+                <ul class="slider">
+                    <li id="slide1">
+                        <img src="../../assets/img/newyork-1.jpg" />
+                    </li>
+                    <li id="slide2">
+                        <img src="../../assets/img/newyork-2.jpg" />
+                    </li>
+                    <li id="slide3">
+                        <img src="../../assets/img/newyork-3.jpg" />
+                    </li>
+                </ul>
+                <ul class="menu">
+                    <li>
+                        <a href="new-york#slide1">1</a>
+                    </li>
+                    <li>
+                        <a href="new-york#slide2">2</a>
+                    </li>
+                    <li>
+                        <a href="new-york#slide3">3</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="destino-descripcion">
+                <p class="parrafo-destino">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, numquam tempore reprehenderit nihil vero quisquam ab deserunt excepturi nam delectus unde, minima cum exercitationem eius possimus dolores deleniti autem corporis, vel eaque! Facilis
+                    aut maiores, itaque labore placeat nesciunt accusantium dolores repudiandae corporis saepe quos quasi qui, eos provident distinctio laborum, magni rem! Repellendus cumque neque molestiae, culpa, asperiores enim veniam molestias corrupti
+                    fugiat dignissimos suscipit, soluta minus magnam itaque! Tempore quaerat id eius nisi corporis natus illo voluptas voluptates delectus labore veniam, explicabo, distinctio ipsa officia, nihil provident ut! Vero, facere dolorem eos aut
+                    veniam praesentium! Praesentium, odit cupiditate.
+                </p>
+                <div class="cita">
+                    <p>
+                        "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam illum optio cum veniam temporibus voluptatem minima dolorem sed molestias minus?"
+                    </p>
+                    <p class="autor">
+                        Alguien
+                    </p>
+                </div>
+                <p class="parrafo-destino">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, numquam tempore reprehenderit nihil vero quisquam ab deserunt excepturi nam delectus unde, minima cum exercitationem eius possimus dolores deleniti autem corporis, vel eaque! Facilis
+                    aut maiores, itaque labore placeat nesciunt accusantium dolores repudiandae corporis saepe quos quasi qui, eos provident distinctio laborum, magni rem! Repellendus cumque neque molestiae, culpa, asperiores enim veniam molestias corrupti
+                    fugiat dignissimos suscipit, soluta minus magnam itaque! Tempore quaerat id eius nisi corporis natus illo voluptas voluptates delectus labore veniam, explicabo, distinctio ipsa officia, nihil provident ut! Vero, facere dolorem eos aut
+                    veniam praesentium! Praesentium, odit cupiditate.
+                </p>
+            </div>
+            <div class="cards contenedor hoteles">
+                <div class="content-cards">
+                    <article class="card card-hotel">
+                        <div>
+                            <i class="fas fa-hotel"></i> &nbsp;
+                            <h3>Hoteles</h3>
+                        </div>
+                        <p>
+                            <a href="https://www.trivago.com.ar/" target="_blanck">Hotel 1</a>
+                        </p>
+                        <p>
+                            <a href="https://www.trivago.com.ar/" target="_blanck">Hotel 2</a>
+                        </p>
+                        <p>
+                            <a href="https://www.trivago.com.ar/" target="_blanck">Hotel 3</a>
+                        </p>
+                        <p>
+                            <a href="https://www.trivago.com.ar/" target="_blanck">Hotel 4</a>
+                        </p>
+                    </article>
+                    <article class="card card-hotel">
+                        <div>
+                            <i class="fas fa-tag"></i> &nbsp;
+                            <h3>Tags</h3>
+                        </div>
+                        <p>
+                            <span class="card card-hotel card-span">Ciudad</span>
+                            <span class="card card-hotel card-span">Turism</span>
+                            <span class="card card-hotel card-span">VirusFriendly</span>
+                        </p>
+                        <p>
+                            <span class="card card-hotel card-span">Tag3</span>
+                            <span class="card card-hotel card-span">Tag4</span>
+                            <span class="card card-hotel card-span">Tag5</span>
+                            <span class="card card-hotel card-span">Tag6</span>
+                        </p>
+                        <p>
+                            <span class="card card-hotel card-span">Tag7</span>
+                            <span class="card card-hotel card-span">Tag8</span>
+                            <span class="card card-hotel card-span">Tag9</span>
+                            <span class="card card-hotel card-span">Tag10</span>
+                        </p>
+                        <p>
+                            <span class="card card-hotel card-span">Tag11</span>
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- FIN NEW YORK -->
+    <!-- RESIS -->
+    <div *ngIf="specific=='resis'">
+        <header class="hero hero-resis">
+            <app-nav-bar></app-nav-bar>
+            <div class="" id="cabecera"></div>
+            <div class="textos-hero">
+                <h1>Chaco</h1>
+                <p>El Más Recomendable y Seguro Destino Turístico Disponible</p>
+            </div>
+            <div class="svg-hero" style="height: 150px; overflow: hidden;" >
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="100 100 1440 3200">
+                    <path fill="#ffffff" fill-opacity="1" d="M0,128L0,32L55.4,32L55.4,288L110.8,288L110.8,288L166.2,288L166.2,192L221.5,192L221.5,192L276.9,192L276.9,160L332.3,160L332.3,288L387.7,288L387.7,128L443.1,128L443.1,192L498.5,192L498.5,256L553.8,256L553.8,320L609.2,320L609.2,256L664.6,256L664.6,288L720,288L720,320L775.4,320L775.4,96L830.8,96L830.8,96L886.2,96L886.2,128L941.5,128L941.5,96L996.9,96L996.9,32L1052.3,32L1052.3,320L1107.7,320L1107.7,96L1163.1,96L1163.1,64L1218.5,64L1218.5,224L1273.8,224L1273.8,0L1329.2,0L1329.2,192L1384.6,192L1384.6,288L1440,288L1440,320L1384.6,320L1384.6,320L1329.2,320L1329.2,320L1273.8,320L1273.8,320L1218.5,320L1218.5,320L1163.1,320L1163.1,320L1107.7,320L1107.7,320L1052.3,320L1052.3,320L996.9,320L996.9,320L941.5,320L941.5,320L886.2,320L886.2,320L830.8,320L830.8,320L775.4,320L775.4,320L720,320L720,320L664.6,320L664.6,320L609.2,320L609.2,320L553.8,320L553.8,320L498.5,320L498.5,320L443.1,320L443.1,320L387.7,320L387.7,320L332.3,320L332.3,320L276.9,320L276.9,320L221.5,320L221.5,320L166.2,320L166.2,320L110.8,320L110.8,320L55.4,320L55.4,320L0,320L0,320Z"></path>
+                </svg>
+            </div>
+        </header>
+        <section class="destino-container">
+            <div class="slider-container" style="float: left;">
+                <ul class="slider">
+                    <li id="slide1">
+                        <img src="../../assets/img/resis-1.jpg"/>
+                    </li>
+                    <li id="slide2">
+                        <img src="../../assets/img/resis-2.jpg"/>
+                    </li>
+                    <li id="slide3">
+                        <img src="../../assets/img/resis.png"/>
+                    </li>
+                </ul>
+                <ul class="menu">
+                    <li>
+                        <a href="resis#slide1">1</a>
+                    </li>
+                    <li>
+                        <a href="resis#slide2">2</a>
+                    </li>
+                    <li>
+                        <a href="resis#slide3">3</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="destino-descripcion">
+                <p class="parrafo-destino">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, numquam tempore reprehenderit nihil vero quisquam ab deserunt excepturi nam delectus unde, minima cum exercitationem eius possimus dolores deleniti autem corporis, vel eaque! Facilis aut maiores, itaque labore placeat nesciunt accusantium dolores repudiandae corporis saepe quos quasi qui, eos provident distinctio laborum, magni rem! Repellendus cumque neque molestiae, culpa, asperiores enim veniam molestias corrupti fugiat dignissimos suscipit, soluta minus magnam itaque! Tempore quaerat id eius nisi corporis natus illo voluptas voluptates delectus labore veniam, explicabo, distinctio ipsa officia, nihil provident ut! Vero, facere dolorem eos aut veniam praesentium! Praesentium, odit cupiditate.
+                </p>
+                <div class="cita">
+                    <p>
+                        "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam illum optio cum veniam temporibus voluptatem minima dolorem sed molestias minus?"
+                    </p>
+                    <p class="autor">
+                        Alguien
+                    </p>
+                </div>
+                <p class="parrafo-destino">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, numquam tempore reprehenderit nihil vero quisquam ab deserunt excepturi nam delectus unde, minima cum exercitationem eius possimus dolores deleniti autem corporis, vel eaque! Facilis aut maiores, itaque labore placeat nesciunt accusantium dolores repudiandae corporis saepe quos quasi qui, eos provident distinctio laborum, magni rem! Repellendus cumque neque molestiae, culpa, asperiores enim veniam molestias corrupti fugiat dignissimos suscipit, soluta minus magnam itaque! Tempore quaerat id eius nisi corporis natus illo voluptas voluptates delectus labore veniam, explicabo, distinctio ipsa officia, nihil provident ut! Vero, facere dolorem eos aut veniam praesentium! Praesentium, odit cupiditate.
+                </p>
+            </div>
+            <div class="cards contenedor hoteles">
+                <div class="content-cards">
+                    <article class="card card-hotel">
+                        <div>
+                            <i class="fas fa-hotel"></i> &nbsp;
+                            <h3>Hoteles</h3>
+                        </div>
+                        <p>
+                            <a href="https://www.trivago.com.ar/" target="_blanck">Covadonga</a>
+                        </p>
+                        <p>
+                            <a href="https://www.trivago.com.ar/" target="_blanck">Atrium</a>
+                        </p>
+                        <p>
+                            <a href="https://www.trivago.com.ar/" target="_blanck">Hotel 3</a>
+                        </p>
+                        <p>
+                            <a href="https://www.trivago.com.ar/" target="_blanck">Hotel 4</a>
+                        </p>
+                    </article>
+                    <article class="card card-hotel">
+                        <div>
+                            <i class="fas fa-tag"></i> &nbsp;
+                            <h3>Tags</h3>
+                        </div>
+                        <p>
+                            <span class="card card-hotel card-span">Ciudad</span>
+                            <span class="card card-hotel card-span">Turism</span>
+                            <span class="card card-hotel card-span">VirusFriendly</span>
+                        </p>
+                        <p>
+                            <span class="card card-hotel card-span">Tag3</span>
+                            <span class="card card-hotel card-span">Tag4</span>
+                            <span class="card card-hotel card-span">Tag5</span>
+                            <span class="card card-hotel card-span">Tag6</span>
+                        </p>
+                        <p>
+                            <span class="card card-hotel card-span">Tag7</span>
+                            <span class="card card-hotel card-span">Tag8</span>
+                            <span class="card card-hotel card-span">Tag9</span>
+                            <span class="card card-hotel card-span">Tag10</span>
+                        </p>
+                        <p>
+                            <span class="card card-hotel card-span">Tag11</span>
+                        </p>
+                    </article>
+                </div>
+            </div> 
+        </section>
+    </div>
+    <!-- FIN RESIS -->
+    <!-- AUSTRIA -->
+    <div *ngIf="specific=='austria'">
+        <header class="hero hero-austria">
+            <app-nav-bar></app-nav-bar>
+            <div class="" id="cabecera"></div>
+            <div class="textos-hero">
+                <h1>Austria</h1>
+                <p>Everything is Legal</p>
+            </div>
+            <div class="svg-hero" style="height: 150px; overflow: hidden;" >
+                <svg viewBox="0 90 1440 320">
+                    <path fill="#ffffff" fill-opacity="1" d="M0,192L144,192L288,64L432,288L576,192L720,96L864,288L1008,96L1152,320L1296,320L1440,192L1440,320L1296,320L1152,320L1008,320L864,320L720,320L576,320L432,320L288,320L144,320L0,320Z"></path>
+                </svg>
+            </div>
+        </header>
+        <section class="destino-container">
+            <div class="slider-container" style="float: left;">
+                <ul class="slider">
+                    <li id="slide1">
+                        <img src="../../assets/img/austria-1.jpg"/>
+                    </li>
+                    <li id="slide2">
+                        <img src="../../assets/img/austria-2.jpg"/>
+                    </li>
+                    <li id="slide3">
+                        <img src="../../assets/img/austria-3.jpg"/>
+                    </li>
+                </ul>
+                <ul class="menu">
+                    <li>
+                        <a href="austria#slide1">1</a>
+                    </li>
+                    <li>
+                        <a href="austria#slide2">2</a>
+                    </li>
+                    <li>
+                        <a href="austria#slide3">3</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="destino-descripcion">
+                <p class="parrafo-destino">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, numquam tempore reprehenderit nihil vero quisquam ab deserunt excepturi nam delectus unde, minima cum exercitationem eius possimus dolores deleniti autem corporis, vel eaque! Facilis aut maiores, itaque labore placeat nesciunt accusantium dolores repudiandae corporis saepe quos quasi qui, eos provident distinctio laborum, magni rem! Repellendus cumque neque molestiae, culpa, asperiores enim veniam molestias corrupti fugiat dignissimos suscipit, soluta minus magnam itaque! Tempore quaerat id eius nisi corporis natus illo voluptas voluptates delectus labore veniam, explicabo, distinctio ipsa officia, nihil provident ut! Vero, facere dolorem eos aut veniam praesentium! Praesentium, odit cupiditate.
+                </p>
+                <div class="cita">
+                    <p>
+                        "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam illum optio cum veniam temporibus voluptatem minima dolorem sed molestias minus?"
+                    </p>
+                    <p class="autor">
+                        Alguien
+                    </p>
+                </div>
+                <p class="parrafo-destino">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, numquam tempore reprehenderit nihil vero quisquam ab deserunt excepturi nam delectus unde, minima cum exercitationem eius possimus dolores deleniti autem corporis, vel eaque! Facilis aut maiores, itaque labore placeat nesciunt accusantium dolores repudiandae corporis saepe quos quasi qui, eos provident distinctio laborum, magni rem! Repellendus cumque neque molestiae, culpa, asperiores enim veniam molestias corrupti fugiat dignissimos suscipit, soluta minus magnam itaque! Tempore quaerat id eius nisi corporis natus illo voluptas voluptates delectus labore veniam, explicabo, distinctio ipsa officia, nihil provident ut! Vero, facere dolorem eos aut veniam praesentium! Praesentium, odit cupiditate.
+                </p>
+            </div>
+            <div class="cards contenedor hoteles">
+                <div class="content-cards">
+                    <article class="card card-hotel">
+                        <div>
+                            <i class="fas fa-hotel"></i> &nbsp;
+                            <h3>Hoteles</h3>
+                        </div>
+                        <p>
+                            <a href="https://www.trivago.com.ar/" target="_blanck">Hotel 1</a>
+                        </p>
+                        <p>
+                            <a href="https://www.trivago.com.ar/" target="_blanck">Hotel 2</a>
+                        </p>
+                        <p>
+                            <a href="https://www.trivago.com.ar/" target="_blanck">Hotel 3</a>
+                        </p>
+                        <p>
+                            <a href="https://www.trivago.com.ar/" target="_blanck">Hotel 4</a>
+                        </p>
+                    </article>
+                    <article class="card card-hotel">
+                        <div>
+                            <i class="fas fa-tag"></i> &nbsp;
+                            <h3>Tags</h3>
+                        </div>
+                        <p>
+                            <span class="card card-hotel card-span">Montañas</span>
+                            <span class="card card-hotel card-span">Turismo</span>
+                        </p>
+                        <p>
+                            <span class="card card-hotel card-span">VirusFriendly</span>
+                            <span class="card card-hotel card-span">Tag3</span>
+                            <span class="card card-hotel card-span">Tag4</span>
+                        </p>
+                        <p>
+                            <span class="card card-hotel card-span">Tag5</span>
+                            <span class="card card-hotel card-span">Tag6</span>
+                            <span class="card card-hotel card-span">Tag7</span>
+                            <span class="card card-hotel card-span">Tag8</span>
+                        </p>
+                        <p>
+                            <span class="card card-hotel card-span">Tag9</span>
+                            <span class="card card-hotel card-span">Tag10</span>
+                            <span class="card card-hotel card-span">Tag11</span>
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- FIN AUSTRIA -->
+    <!-- GRECIA -->
+    <div *ngIf="specific=='grecia'">
+        <header class="hero hero-grecia">
+            <app-nav-bar></app-nav-bar>
+            <div class="" id="cabecera"></div>
+            <div class="textos-hero">
+                <h1>Grecia</h1>
+                <p>Turismo, Mar, Gastronomía, y Mucho Más</p>
+            </div>
+            <div class="svg-wave" style="height: 150px; overflow: hidden;" >
+                <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
+                    <path d="M0.00,49.98 C150.00,150.00 349.20,-50.00 500.00,49.98 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: #ffffff;"></path>
+                </svg>
+            </div>
+        </header>    
+        <section class="destino-container">
+            <div class="slider-container" style="float: left;">
+                <ul class="slider">
+                    <li id="slide1">
+                        <img src="../../assets/img/grecia-1.jpg"/>
+                    </li>
+                    <li id="slide2">
+                        <img src="../../assets/img/grecia-2.jpg"/>
+                    </li>
+                    <li id="slide3">
+                        <img src="../../assets/img/grecia-3.jpg"/>
+                    </li>
+                </ul>
+                <ul class="menu">
+                    <li>
+                        <a href="grecia#slide1">1</a>
+                    </li>
+                    <li>
+                        <a href="grecia#slide2">2</a>
+                    </li>
+                    <li>
+                        <a href="grecia#slide3">3</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="destino-descripcion">
+                <p class="parrafo-destino">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, numquam tempore reprehenderit nihil vero quisquam ab deserunt excepturi nam delectus unde, minima cum exercitationem eius possimus dolores deleniti autem corporis, vel eaque! Facilis aut maiores, itaque labore placeat nesciunt accusantium dolores repudiandae corporis saepe quos quasi qui, eos provident distinctio laborum, magni rem! Repellendus cumque neque molestiae, culpa, asperiores enim veniam molestias corrupti fugiat dignissimos suscipit, soluta minus magnam itaque! Tempore quaerat id eius nisi corporis natus illo voluptas voluptates delectus labore veniam, explicabo, distinctio ipsa officia, nihil provident ut! Vero, facere dolorem eos aut veniam praesentium! Praesentium, odit cupiditate.
+                </p>
+                <div class="cita">
+                    <p>
+                        "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam illum optio cum veniam temporibus voluptatem minima dolorem sed molestias minus?"
+                    </p>
+                    <p class="autor">
+                        Alguien
+                    </p>
+                </div>
+                <p class="parrafo-destino">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, numquam tempore reprehenderit nihil vero quisquam ab deserunt excepturi nam delectus unde, minima cum exercitationem eius possimus dolores deleniti autem corporis, vel eaque! Facilis aut maiores, itaque labore placeat nesciunt accusantium dolores repudiandae corporis saepe quos quasi qui, eos provident distinctio laborum, magni rem! Repellendus cumque neque molestiae, culpa, asperiores enim veniam molestias corrupti fugiat dignissimos suscipit, soluta minus magnam itaque! Tempore quaerat id eius nisi corporis natus illo voluptas voluptates delectus labore veniam, explicabo, distinctio ipsa officia, nihil provident ut! Vero, facere dolorem eos aut veniam praesentium! Praesentium, odit cupiditate.
+                </p>
+            </div>
+            <div class="cards contenedor hoteles">
+                <div class="content-cards">
+                    <article class="card card-hotel">
+                        <div>
+                            <i class="fas fa-hotel"></i> &nbsp;
+                            <h3>Hoteles</h3>
+                        </div>
+                        <p>
+                            <a href="https://www.trivago.com.ar/" target="_blanck">Hotel 1</a>
+                        </p>
+                        <p>
+                            <a href="https://www.trivago.com.ar/" target="_blanck">Hotel 2</a>
+                        </p>
+                        <p>
+                            <a href="https://www.trivago.com.ar/" target="_blanck">Hotel 3</a>
+                        </p>
+                        <p>
+                            <a href="https://www.trivago.com.ar/" target="_blanck">Hotel 4</a>
+                        </p>
+                    </article>
+                    <article class="card card-hotel">
+                        <div>
+                            <i class="fas fa-tag"></i> &nbsp;
+                            <h3>Tags</h3>
+                        </div>
+                        <p>
+                            <span class="card card-hotel card-span">Historia</span>
+                            <span class="card card-hotel card-span">Ciudad</span>
+                            <span class="card card-hotel card-span">Mar</span>
+                        </p>
+                        <p>
+                            <span class="card card-hotel card-span">VirusFriendly</span>
+                            <span class="card card-hotel card-span">Turismo</span>
+                            <span class="card card-hotel card-span">Tag5</span>
+                        </p>
+                        <p>
+                            <span class="card card-hotel card-span">Tag6</span>
+                            <span class="card card-hotel card-span">Tag7</span>
+                            <span class="card card-hotel card-span">Tag8</span>
+                        </p>
+                        <p>
+                            <span class="card card-hotel card-span">Tag9</span>
+                            <span class="card card-hotel card-span">Tag10</span>
+                            <span class="card card-hotel card-span">Tag11</span>
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- FIN GRECIA -->
+</body>

@@ -1,0 +1,337 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bonus Trav</title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="hero">
+        <app-nav-bar></app-nav-bar>
+        <div class="textos-hero">
+            <h1>Bonus Trav</h1>
+            <p>Aerolíneas cerradas temporalmente debido a la pandemia... Guiño guiño</p>
+            <a href="#contacto" class="ng-btn-indx">Contacto</a>
+        </div>
+        <div class="svg-hero" style="height: 150px; overflow: hidden;">
+            <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
+                <path d="M0.00,49.98 C150.00,150.00 349.20,-50.00 500.00,49.98 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: #ffffff;"></path>
+            </svg>
+        </div>
+    </header>
+    <section class="wave-contenedor website" id="nosotros">
+        <img src="../../assets/img/undraw_adventure_4hum.svg" alt="Ilustracion 1">
+        <div class="contenedor-textos-main">
+            <h2 class="titulo left">Sobre nosotros</h2>
+            <p class="parrafo">Somos una empresa con más de 10 años de trayectoria en el mercado que centra sus estándares de calidad en la satisfacción del cliente, bindándole la mejor experiencia al menor precio posible.</p>
+            <!-- <a href="nosotros.html" class="cta">Leer más</a> -->
+            <a routerLink="/nosotros" class="cta ng-btn-indx">Leer más</a>
+        </div>
+    </section>
+    <section class="info">
+        <div class="contenedor">
+            <h2 class="titulo left">Juntos podemos ayudar</h2>
+            <p>Tomando los recaudos necesarios desde el lado de la empresa, se confía en que los clientes también pongan de su parte para combatir la pandemia que actualmente está condicionando las actividades del rubro.</p>
+        </div>
+    </section>
+    <section class="cards contenedor" id="servicios">
+        <h2 class="titulo">Acerca del servicio</h2>
+        <div class="content-cards">
+            <article class="card ng-card" onclick="location.href = 'pagos';">
+                <!-- <article class="card"> -->
+                <img src="../../assets/img/card.svg" alt="card" class="tarjeta ng-img">
+                <h3>Planes de Pago</h3>
+                <p>Planes accesibles y pensados para la economía actual</p>
+                <a href="" class="cta ng-btn-indx ng-article">Leer más</a>
+                <!-- <a routerLink="/pagos" class="cta">Leer más</a> -->
+            </article>
+            <article class="card ng-card" onclick="location.href = 'index.html#destinos';">
+                <img src="../../assets/img/pin.svg" alt="pin" class="pin ng-img">
+                <h3>Destinos Disponibles</h3>
+                <p>Catálogo amplio de destinos seguros y turísticos</p>
+                <a href="" class="cta ng-btn-indx ng-article">Leer más</a>
+            </article>
+            <article class="card ng-card">
+                <img src="../../assets/img/motorcycle.svg" alt="moto" class="moto ng-img">
+                <h3>Alquileres de Vehículos</h3>
+                <p>Servicios de alquiler para una experiencia inmejorable</p>
+                <a href="" class="cta ng-btn-indx ng-article">Leer más</a>
+            </article>
+        </div>
+    </section>
+    <section class="galeria" id="destinos">
+        <div class="contenedor">
+            <h2 class="titulo">Destinos</h2>
+            <article class="galeria-cont">
+                <img src="../../assets/img/italia.jpg" alt="Italia" onclick="location.href = 'italia';">
+                <img src="../../assets/img/dos.jpg" alt="">
+                <img src="../../assets/img/tres.jpg" alt="New York" onclick="location.href = 'new-york';">
+                <img src="../../assets/img/Resist_2.jpg" alt="Resistencia" onclick="location.href = 'resis';">
+                <img src="../../assets/img/cinco.jpg" alt="Austria" onclick="location.href = 'austria';">
+                <img src="../../assets/img/grecia.jpg" alt="Grecia" onclick="location.href = 'grecia';">
+            </article>
+        </div>
+    </section>
+    <section class="info-last">
+        <div class="contenedor last-section">
+            <div class="contenedor-textos-main">
+                <h2 class="titulo left">Paquetes de viajes</h2>
+                <p class="parrafo">Si lo suyo no es quedarse solo con conocer un destino, ofrecemos paquetes armados con importantes descuentos, dándole la posibilidad de conocer el mundo en un mismo viaje.</p>
+                <a href="" class="cta ng-btn-indx">Leer más</a>
+            </div>
+            <img src="../../assets/img/undraw_destinations_fpv7.svg" alt="">
+        </div>
+        <div class="svg-wave" style="height: 150px; overflow: hidden;">
+            <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
+                <path d="M0.00,49.98 C150.00,150.00 349.20,-50.00 500.00,49.98 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: #f5576c;"></path>
+            </svg>
+        </div>
+    </section>
+    <div class="contacto" id="contacto">
+        <div class="contenedor">
+            <h2 class="titulo">Contáctanos</h2>
+            <p class="contact-paragraph">Los campos marcados con un "<span class="highlighted-text">*</span>" son obligatorios</p>
+            <form id="contact-form" action="/contact" method="POST" class="form" onsubmit="event.preventDefault(); guardar();">
+                <input class="input" type="text" name="" id="nombre" placeholder="Nombre *">
+                <input class="input" type="email" name="" id="emailContacto" placeholder="E-mail *">
+                <textarea class="input" name="" id="mensaje" cols="30" rows="10" maxlength="150" placeholder="Mensaje *"></textarea>
+                <div class="contact-buttons" id="contactFormFooter">
+                    <input class="input" type="submit" value="Enviar">
+                    <input class="input" type="reset" value="Restablecer" id="restablecer" name="restablecer" onclick="return resetCounter();">
+                </div>
+            </form>
+        </div>
+    </div>
+    <script type="text/javascript" src="../../assets/js/contactValidation.js"></script>
+    <script type="text/javascript" src="../../assets/js/enviar.js"></script>
+    <script type="text/javascript" src="../../assets/js/rest.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</body>
+<script>
+    /***************************************************************************************************/
+    /**********************************************CONTACT FORM*****************************************/
+    /***************************************************************************************************/
+
+    // Esta expresión regular es usada tanto para el formulario de contacto como para el NewsLetter
+    expresionEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.com)+$/;
+
+    let mensaje = document.getElementById("mensaje");
+    let contactFormFooter = document.getElementById("contactFormFooter");
+
+    // Creo el contador de caracteres del campo Mensaje
+    let par = document.createElement("p");
+    par.textContent = mensaje.value.length + "/150";
+    par.style.color = "white";
+    par.style.fontSize = "18px";
+    par.style.float = "right";
+
+    contactFormFooter.appendChild(par);
+
+    // Ante cada cambio en el campo Mensaje, actualizo el contador de caracteres
+    mensaje.addEventListener("input", function(e) {
+        par.textContent = mensaje.value.length + "/150";
+    });
+
+    // Al clickear el botón reset, también actualizo el contador de caracteres
+    function resetCounter() {
+        par.textContent = "0/150";
+    }
+
+
+    // Función a la que se llama al hacer click en Enviar
+    // Función deprecada debido a que el submit del form de contacto ahora ejecuta directamente la función guardar() del archivo rest.js
+    /* function validarContact() {
+        let nombre = document.getElementById("nombre");
+        let email = document.getElementById("emailContacto");
+        let formulario = document.getElementById("contact-form");
+        let errores = {};
+
+        // Expresión regular para validar que el campo Nombre solo contenga letras y espacios
+        expresionNombre = /^[ñA-Za-z _]*[ñA-Za-z][ñA-Za-z _]*$/;
+
+        // Validación del campo Nombre
+        if ( nombre.value === "") {
+            errores.nombre = "El campo Nombre no puede ser nulo";
+            nombre.style.background = "hsla(0, 0%, 0%, 0.2)";
+        } else if (!expresionNombre.test(nombre.value)){
+            errores.nombre = "El campo Nombre solo puede contener letras y espacios";
+            nombre.style.background = "hsla(0, 0%, 0%, 0.2)";
+        } else {
+            nombre.style.background = "transparent";
+        }
+
+        // Validación del campo E-mail
+        if (email.value === "") {
+            errores.email = "El campo E-mail no puede ser nulo";
+            email.style.background = "hsla(0, 0%, 0%, 0.2)";
+        } else if (!expresionEmail.test(email.value)){
+            errores.email = "E-mail inválido";
+            email.style.background = "hsla(0, 0%, 0%, 0.2)";
+        } else {
+            email.style.background = "transparent";
+        }
+
+        // Validación del campo Mensaje
+        if (mensaje.value === "") {
+            errores.mensaje = "El campo Mensaje no puede ser nulo";
+            mensaje.style.background = "hsla(0, 0%, 0%, 0.2)";
+        } else if (mensaje.value.length > 150){
+            errores.mensaje = "La longitud máxima del mensaje admitida es de 150 caracteres";
+            mensaje.style.background = "hsla(0, 0%, 0%, 0.2)";
+        } else {
+            mensaje.style.background = "transparent";
+        }
+
+        // Alert dependiendo de si hay errores o está todo bien
+        if ( !("nombre" in errores) && !("email" in errores) && !("mensaje" in errores) ) {
+            alert("Todo OK");
+
+            //postMensaje(nombre.value, email.value, mensaje.value);
+
+            formulario.reset();
+            par.textContent = "0/150";
+            //alert("Guardado");
+            return false;
+        } else {
+            alert(`${"nombre" in errores ? (errores.nombre + "\n") : "" }` + 
+            `${"email" in errores ? (errores.email + "\n") : "" }`  +
+            `${"mensaje" in errores ? (errores.mensaje) : "" }`);
+            //Es necesario añadir el return para que no continúe la ejecución
+            return false;
+        }
+
+    } */
+</script>
+
+<script>
+    async function guardar() {
+        try {
+            let nombre = document.getElementById("nombre");
+            let email = document.getElementById("emailContacto");
+            let formulario = document.getElementById("contact-form");
+            let errores = {};
+
+            // Expresión regular para validar que el campo Nombre solo contenga letras y espacios
+            expresionNombre = /^[ñA-Za-z _]*[ñA-Za-z][ñA-Za-z _]*$/;
+
+            // Validación del campo Nombre
+            if (nombre.value === "") {
+                errores.nombre = "El campo Nombre no puede ser nulo";
+                nombre.style.background = "hsla(0, 0%, 0%, 0.2)";
+            } else if (!expresionNombre.test(nombre.value)) {
+                errores.nombre = "El campo Nombre solo puede contener letras y espacios";
+                nombre.style.background = "hsla(0, 0%, 0%, 0.2)";
+            } else {
+                nombre.style.background = "transparent";
+            }
+
+            // Validación del campo E-mail
+            if (email.value === "") {
+                errores.email = "El campo E-mail no puede ser nulo";
+                email.style.background = "hsla(0, 0%, 0%, 0.2)";
+            } else if (!expresionEmail.test(email.value)) {
+                errores.email = "E-mail inválido";
+                email.style.background = "hsla(0, 0%, 0%, 0.2)";
+            } else {
+                email.style.background = "transparent";
+            }
+
+            // Validación del campo Mensaje
+            if (mensaje.value === "") {
+                errores.mensaje = "El campo Mensaje no puede ser nulo";
+                mensaje.style.background = "hsla(0, 0%, 0%, 0.2)";
+            } else if (mensaje.value.length > 150) {
+                errores.mensaje = "La longitud máxima del mensaje admitida es de 150 caracteres";
+                mensaje.style.background = "hsla(0, 0%, 0%, 0.2)";
+            } else {
+                mensaje.style.background = "transparent";
+            }
+
+            var promise = new Promise((resolve, reject) => {
+                if (!("nombre" in errores) && !("email" in errores) && !("mensaje" in errores)) {
+                    alert("Todo OK");
+                    var obj = {
+                        nombre: nombre.value,
+                        email: email.value,
+                        mensaje: mensaje.value
+                    };
+
+                    $.ajax({
+                        type: 'POST',
+                        data: JSON.stringify(obj),
+                        cache: false,
+                        contentType: 'application/json',
+                        datatype: "json",
+                        url: '/api/contact',
+                        success: function(data) {
+                            if (data['fail']) {
+                                alert(data['mensaje']);
+                                reject("Error");
+                            } else {
+                                //window.location.assign("/nosotros.html");
+                                console.log(data);
+                                //bd.push(obj);
+                                formulario.reset();
+                                par.textContent = "0/150";
+                                resolve("Hecho!");
+                            }
+                        }
+                    });
+                    /* 
+                    formulario.reset();
+                    par.textContent = "0/150";
+                    setTimeout(() => {
+                        bd.push(obj);
+                        resolve("Hecho!");
+                    }, 5000); */
+                } else {
+                    // Si no le concateno con "\n" y hago que tome los saltos de línea del template string,en el alert me sale el mensaje tomando también las tabulaciones de la identaicón
+                    reject(`${"nombre" in errores ? (errores.nombre + "\n") : "" }` +
+                        `${"email" in errores ? (errores.email + "\n") : "" }` +
+                        `${"mensaje" in errores ? (errores.mensaje) : "" }`);
+                }
+
+            });
+            const res = await promise;
+
+            if (res == "Hecho!") {
+                /* for(var singleKey in bd){
+                    console.log(bd[singleKey]);
+                } */
+                alert("Guardado");
+            } else {
+                throw res;
+            }
+
+        } catch (e) {
+            alert(e);
+        }
+    }
+
+
+
+    async function leer() {
+        try {
+            var promise = new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    let parrafo = document.createElement("pre");
+                    parrafo.textContent = JSON.stringify(bd, null, 4);
+                    document.getElementById("bd").appendChild(parrafo);
+                    resolve("Hecho!");
+                }, 3000)
+            });
+            const res = await promise;
+            if (res != "Hecho!") {
+                throw "Error al leer datos"
+            }
+        } catch (e) {
+            alert(e);
+        }
+    }
+</script>
+
+<script>
+    function postMensaje(nombre, email, mensaje) {
+        guardar(nombre, email, mensaje);
+    }
+</script>
